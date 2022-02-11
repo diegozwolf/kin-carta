@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ComponentsModule } from '../components/components.module';
 
 import { HomeComponent } from './home/home.component';
+import { MaterialModule } from '../components/material.module';
 
 
 
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
+    MaterialModule
   ]
 })
 export class PagesModule { }

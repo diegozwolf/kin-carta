@@ -3,7 +3,7 @@
 
 <h3>{{nombre}}</h3>
 
-<button class="btn btn-primary" (click)="cambiarNombre()">
+<button mat-raised-button color="primary" (click)="cambiarNombre()">
     Cambiar nombre
 </button>
 
@@ -11,3 +11,4 @@
 
 
 <app-hijo [nombreHijo]="nombre" (cambioNombreHijo)="nombre = $event"></app-hijo>
+
