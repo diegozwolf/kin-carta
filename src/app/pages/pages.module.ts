@@ -8,6 +8,7 @@ import { MaterialModule } from '../components/material.module';
 
 
 
+
 @NgModule({
   declarations: [
     HomeComponent
@@ -16,6 +17,9 @@ import { MaterialModule } from '../components/material.module';
     CommonModule,
     ComponentsModule,
     MaterialModule
+  ],
+  exports: [
+    HomeComponent
   ]
 })
 export class PagesModule { }

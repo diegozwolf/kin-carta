@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { HijoComponent } from './hijo/hijo.component';
 import { MaterialModule } from './material.module';
+
+import { PagesModule } from '../pages/pages.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 
 
@@ -11,15 +14,18 @@ import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    SidenavComponent
   ],
   imports: [
     CommonModule,
     MaterialModule
   ],
   exports: [
+    MaterialModule,
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    SidenavComponent
   ]
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
