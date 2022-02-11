@@ -1,12 +1,24 @@
-<h1>Home component</h1>
-<hr>
 
-<h3>{{nombre}}</h3>
 
-<button mat-raised-button color="primary" (click)="cambiarNombre()">
-    Cambiar nombre
-</button>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        Item
+    </mat-sidenav>
+    <mat-sidenav-content >
+        <div class="content mat-elevation-z4">
+            <h1>Home component</h1>
+            <hr>
 
-<hr>
-<app-hijo [nombreHijo]="nombre" (cambioNombreHijo)="nombre = $event"></app-hijo>
+            <h3>{{nombre}}</h3>
+
+            <button mat-raised-button color="primary" (click)="cambiarNombre()">
+                Cambiar nombre
+            </button>
+
+            <hr>
+            <app-hijo [nombreHijo]="nombre" (cambioNombreHijo)="nombre = $event"></app-hijo>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
 
