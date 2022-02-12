@@ -6,6 +6,7 @@ import { MaterialModule } from './material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { UsersComponent } from './users/users.component';
 
 
 
@@ -14,7 +15,8 @@ import { QuestionsComponent } from './questions/questions.component';
   declarations: [
     NavbarComponent,
     HijoComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { QuestionsComponent } from './questions/questions.component';
     MaterialModule,
     NavbarComponent,
     HijoComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    UsersComponent
   ]
 })
 export class ComponentsModule {}
