@@ -5,6 +5,7 @@ import { MaterialModule } from './material.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 
@@ -12,7 +13,8 @@ import { HijoComponent } from './hijo/hijo.component';
 @NgModule({
   declarations: [
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    QuestionsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { HijoComponent } from './hijo/hijo.component';
   exports: [
     MaterialModule,
     NavbarComponent,
-    HijoComponent
+    HijoComponent,
+    QuestionsComponent
   ]
 })
 export class ComponentsModule {}
