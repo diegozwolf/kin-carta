@@ -1,8 +1,8 @@
+@import '../../../shared/styles.scss';
 .mat-toolbar {
     height: 60px;
-    background-color: #fff;
-    border-bottom: 1px solid #dadada;
-    padding-left: 24px;
+    background-color: $kc-white;
+    border-bottom: $kc-border;
     img {
         height: 18.46px;
     }
