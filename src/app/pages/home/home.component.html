@@ -2,19 +2,22 @@
 
 <mat-sidenav-container>
     <mat-sidenav #sidenav="matSidenav">
-        Item
+        <p class="item-bar active-item">Home</p>
+        <p class="item-bar">Second page</p>
+        <p class="item-bar">Second page</p>
     </mat-sidenav>
     <mat-sidenav-content >
         <div class="content">
-            <h1>Home component</h1>
-            <hr>
+            <h1>Welcome Home</h1>
+            <h2>Frequent Asked Questions</h2>
+            <!-- <hr>
 
             <h3>{{nombre}}</h3>
             <button mat-raised-button color="primary" (click)="cambiarNombre()">
                 Cambiar nombre
             </button>
             <hr>
-            <app-hijo [nombreHijo]="nombre" (cambioNombreHijo)="nombre = $event"></app-hijo>
+            <app-hijo [nombreHijo]="nombre" (cambioNombreHijo)="nombre = $event"></app-hijo> -->
 
             <app-questions></app-questions>
             <app-users></app-users>
