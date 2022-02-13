@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { UsersComponent } from './users/users.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 
@@ -16,7 +17,8 @@ import { UsersComponent } from './users/users.component';
     NavbarComponent,
     HijoComponent,
     QuestionsComponent,
-    UsersComponent
+    UsersComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { UsersComponent } from './users/users.component';
     NavbarComponent,
     HijoComponent,
     QuestionsComponent,
-    UsersComponent
+    UsersComponent,
+    CardsComponent
   ]
 })
 export class ComponentsModule {}
