@@ -1,10 +1,7 @@
 @import '../../../shared/styles.scss';
-.example-tree-invisible {
-    display: none;
-}
-
 .mat-tree-head {
     width: 936px;
+    height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,46 +12,70 @@
 
 .mat-tree-head-expand {
     width: 936px;
-    height: 375px;
+    height: 279px;
     margin-bottom: 8px;
     box-shadow: 0px 1px 5px 0px #0000002B;
-    padding-left: 16px;
+    padding: 16px;
 }
 
+mat-tree-node {
+    display: none !important;
+}
 .row-content {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-}
-mat-tree-node {
-    display: none;
+    h3 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
 }
 .question-content {
     height: 40px;
     width: 100%;
-    background-color: cadetblue;
 }
-.example-tree ul,
-.example-tree li {
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style-type: none;
+.content-title {
+    padding-top: 16px;
+    font-size: 16px;
+    color: $gray-text;
+    font-weight: 700;
+}
+.text-content {
+    font-size: 16px;
+    color: $gray-text;
+    font-weight: 400;
+}
+.mat-tab-label {
+    padding: 5px;
+    color: $gray-text2;
+    font-family: Museo Sans;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
 }
 
-/*
-   * This padding sets alignment of the nested nodes.
-   */
-.example-tree .mat-nested-tree-node div[role=group] {
-    padding-left: 40px;
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 130px;
+    padding: 5px;
+    background-color: transparent;
+    font-family: Museo Sans;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $primary-blue;
+    font-weight: 600;
+    font-size: 11px;
 }
 
-/*
-   * Padding for leaf nodes.
-   * Leaf nodes need to have padding so as to align with other non-leaf nodes
-   * under the same parent.
-   */
-.example-tree div[role=group] > .mat-tree-node {
-    padding-left: 40px;
+/* Styles for the ink bar */
+.mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: $primary-blue;
+}
+
+.mat-icon-rtl-mirror {
+    color: $gray-text3;
 }
