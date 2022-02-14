@@ -5,9 +5,9 @@ import { MaterialModule } from './material.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
-import { QuestionsComponent } from './questions/questions.component';
 import { UsersComponent } from './users/users.component';
 import { CardsComponent } from './cards/cards.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 
