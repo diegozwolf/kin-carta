@@ -1,8 +1,17 @@
-<button mat-raised-button (click)="addColumn()"> Add column </button>
-<button mat-raised-button (click)="removeColumn()"> Remove column </button>
-<button mat-raised-button (click)="shuffle()"> Shuffle </button>
 
-<table mat-table [dataSource]="data" class="mat-elevation-z8">
+<div class="head-table">
+  <h2>Table</h2>
+  <div class="btn-container">
+    <p class="status-txt">Status filter:</p>
+    <button mat-button class="btn-basic"> Accepted </button>
+    <button mat-button class="btn-active"> Declined</button>
+    <button mat-raised-button (click)="addColumn()"> Add column </button>
+    <button mat-raised-button (click)="removeColumn()"> Remove column </button>
+    <button mat-raised-button (click)="shuffle()"> Shuffle </button>
+  </div>
+</div>
+
+<table mat-table [dataSource]="data">
   <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
     <th mat-header-cell *matHeaderCellDef> {{column}} </th>
     <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
