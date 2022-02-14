@@ -8,6 +8,7 @@ import { HijoComponent } from './hijo/hijo.component';
 import { UsersComponent } from './users/users.component';
 import { CardsComponent } from './cards/cards.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { UsertableComponent } from './usertable/usertable.component';
 
 
 
@@ -18,7 +19,8 @@ import { QuestionsComponent } from './questions/questions.component';
     HijoComponent,
     QuestionsComponent,
     UsersComponent,
-    CardsComponent
+    CardsComponent,
+    UsertableComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { QuestionsComponent } from './questions/questions.component';
     HijoComponent,
     QuestionsComponent,
     UsersComponent,
-    CardsComponent
+    CardsComponent,
+    UsertableComponent
   ]
 })
 export class ComponentsModule {}
