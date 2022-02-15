@@ -27,16 +27,13 @@
       <td>{{user.lastname}}</td>
       <td>{{user.email}}</td>
       <td [ngClass]=" user.status === 'Accepted' ? 'accepted' : 'declined'">
-        <div [ngClass]=" user.status === 'Accepted' ? 'circle-green' : 'circle-red'">
-          <mat-icon class="icon-status" >
-            {{user.status === 'Accepted'? 'check' : 'close'}}
-          </mat-icon>
-        </div>
+        <img src="assets/img/checkmark.svg" *ngIf="user.status === 'Accepted'" alt="checkmark icon">
+        <img src="assets/img/close-mark.svg" *ngIf="user.status === 'Declined'" alt="close icon">
         {{user.status}}
       </td>
       <td class="share">
         {{user.share}}
-        <img src="/assets/img/share-logo.svg" alt="share icon">
+        <img src="assets/img/share-logo.svg" alt="share icon">
       </td>
 
     </tr>
