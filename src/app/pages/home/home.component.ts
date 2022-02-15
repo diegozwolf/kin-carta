@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit,ViewChild, Output, EventEmitter } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
@@ -9,16 +9,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class HomeComponent implements OnInit {
 
-  nombre: string = 'Nombre usuario';
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
+  @Output() showSideBar = new EventEmitter<string>();
   constructor(private observer: BreakpointObserver) { }
 
   ngOnInit(): void {
-  }
-  cambiarNombre() {
-    this.nombre = 'Diego Zuluaga';
   }
 
   ngAfterViewInit() {
@@ -27,9 +24,11 @@ export class HomeComponent implements OnInit {
       .subscribe((res) => {
         if (res.matches) {
           this.sidenav.mode = 'over';
+          this,this.showSideBar.emit(this.sidenav.mode);
           this.sidenav.close();
         } else {
           this.sidenav.mode = 'side';
+          this,this.showSideBar.emit(this.sidenav.mode);
           this.sidenav.open();
         }
       });
