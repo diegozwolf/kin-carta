@@ -51,31 +51,4 @@ export class UsertableComponent implements OnInit {
       this.userStatus = !this.userStatus;
     }
   }
-
-  // displayedColumns: string[] = ['name', 'lastname', 'email', 'status', 'share'];
-  // columnsToDisplay: string[] = this.displayedColumns.slice();
-  // addColumn() {
-  //   const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
-  //   this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
-  // }
-
-  // removeColumn() {
-  //   if (this.columnsToDisplay.length) {
-  //     this.columnsToDisplay.pop();
-  //   }
-  // }
-
-  // shuffle() {
-  //   let currentIndex = this.columnsToDisplay.length;
-  //   while (0 !== currentIndex) {
-  //     let randomIndex = Math.floor(Math.random() * currentIndex);
-  //     currentIndex -= 1;
-
-  //     // Swap
-  //     let temp = this.columnsToDisplay[currentIndex];
-  //     this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
-  //     this.columnsToDisplay[randomIndex] = temp;
-  //   }
-  // }
-
 }

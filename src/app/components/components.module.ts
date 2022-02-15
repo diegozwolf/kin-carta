@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { HijoComponent } from './hijo/hijo.component';
-import { UsersComponent } from './users/users.component';
 import { CardsComponent } from './cards/cards.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { UsertableComponent } from './usertable/usertable.component';
@@ -18,9 +16,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     NavbarComponent,
-    HijoComponent,
     QuestionsComponent,
-    UsersComponent,
     CardsComponent,
     UsertableComponent
   ],
@@ -34,9 +30,7 @@ import { FormsModule } from '@angular/forms';
   exports: [
     MaterialModule,
     NavbarComponent,
-    HijoComponent,
     QuestionsComponent,
-    UsersComponent,
     CardsComponent,
     UsertableComponent,
     Ng2SearchPipeModule
