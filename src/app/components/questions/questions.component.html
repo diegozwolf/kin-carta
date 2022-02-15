@@ -7,8 +7,10 @@
             <div class="row-content">
                 <h3>{{node.name}}</h3>
                 <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
-                    <mat-icon class="mat-icon-rtl-mirror" >{{treeControl.isExpanded(node) ? 'expand_less' : 'expand_more'}}
-                    </mat-icon>
+                    <!-- <mat-icon class="mat-icon-rtl-mirror" >{{treeControl.isExpanded(node) ? 'expand_less' : 'expand_more'}}
+                    </mat-icon> -->
+                    <img src="/assets/img/arrow-up.svg"  *ngIf="treeControl.isExpanded(node)" alt="arrow up icon">
+                    <img src="/assets/img/arrow-down.svg" *ngIf="!treeControl.isExpanded(node)"  alt="arrow down icon">
                 </button>
             </div>
             <div class="question-content" *ngIf="treeControl.isExpanded(node)">
