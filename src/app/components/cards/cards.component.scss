@@ -1,0 +1,43 @@
+@import '../../../shared/styles.scss';
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: $primary-blue;
+    margin-bottom: 0px;
+}
+.mat-grid-list {
+    width: 1000px;
+}
+mat-grid-tile{
+    margin-left: -20px;
+    .card {
+        width:456px;
+        height: 204px;
+        margin-right: 24px;
+        box-shadow: 0px 1px 5px 0px #0000002B;
+        h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: $kc-black;
+        }
+        .description {
+            margin-top: 14px;
+            font-size: 16px;
+            line-height: 128%;
+            color: $gray-text;
+        }
+        .action {
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: $primary-blue;
+            display: flex;
+            margin-top: 22px;
+            img  {
+                margin-left: 8.67px;
+            }
+        }
+    }
+}

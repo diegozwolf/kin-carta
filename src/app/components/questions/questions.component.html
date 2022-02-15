@@ -1,0 +1,32 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree" >
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+        {{node.name}} porro
+    </mat-tree-node>
+    <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+        <div [ngClass]="treeControl.isExpanded(node) ? 'mat-tree-head-expand' : 'mat-tree-head'"> 
+            <div class="row-content">
+                <h3>{{node.name}}</h3>
+                <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                    <img src="/assets/img/arrow-up.svg"  *ngIf="treeControl.isExpanded(node)" alt="arrow up icon">
+                    <img src="/assets/img/arrow-down.svg" *ngIf="!treeControl.isExpanded(node)"  alt="arrow down icon">
+                </button>
+            </div>
+            <div class="question-content" *ngIf="treeControl.isExpanded(node)">
+                <mat-tab-group>
+                    <mat-tab label="Element 1"> 
+                        <p class="content-title">{{title1}}</p>
+                        <p class="text-content">{{content1}}</p>
+                    </mat-tab>
+                    <mat-tab label="Element 2"> 
+                        <p class="content-title">{{title2}}</p>
+                        <p class="text-content">{{content2}}</p>
+                    </mat-tab>
+                
+                </mat-tab-group>
+            </div>
+        </div>
+        <div [class.example-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+            <ng-container matTreeNodeOutlet></ng-container>
+        </div>
+    </mat-nested-tree-node>
+</mat-tree>

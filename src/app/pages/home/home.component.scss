@@ -1,0 +1,56 @@
+@import '../../../shared/styles.scss';
+
+.mat-drawer-container {
+    background: $kc-white; 
+}
+mat-sidenav {
+    width: 168px;
+    height: 1033px;
+    margin-left: 76px;
+    background: $kc-white;
+    color: $gray-text;
+    font-size: 18px;
+    font-weight: 400;
+    cursor:pointer;
+    padding-top: 38px;
+    border-left: $kc-border;
+    border-right: $kc-border;
+    p {
+        padding-left: 25px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .active-item, p:hover {
+        border-left: 3px solid $primary-blue;
+        color: $primary-blue;
+        font-weight: 900;
+    }
+
+}
+
+
+
+.content{
+    margin-left: 76px;
+    padding-top: 44px;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media screen and (max-width: 800px) {
+        margin-left: 0;
+    }
+    h1 {
+        color: $primary-blue;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    h2 {
+        margin-top: 38px;
+        color: $primary-blue;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}

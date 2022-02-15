@@ -1,0 +1,112 @@
+@import '../../../shared/styles.scss';
+.head-table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 54px;
+    @media screen and (max-width: 800px) {
+        width: 410px;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+        color: $primary-blue;
+    }
+    .status-txt {
+        font-weight: 400;
+        color: $kc-black;
+        font-size: 14px;
+        display: inline;
+    }
+}
+
+table {
+    width: 936px;
+    box-shadow: 0px 1px 5px 0px #0000002B;
+    margin-bottom: 50px;
+    @media screen and (max-width: 800px) {
+        width: 410px;
+    }
+    th {
+        color: $gray-head-table;
+        font-weight: 700;
+        font-size: 12px;
+        height: 54px;
+        text-transform: uppercase;
+        border-bottom: 1px solid $light-gray;
+        padding-left: 16px;
+    }
+    td {
+        border-bottom: 1px solid $light-gray;
+        height: 49px;
+        padding-left: 16px;
+        color: $gray-text;
+        font-weight: 400;
+    }
+    .accepted {
+        font-weight: 500;
+        color: $success;
+        display: flex;
+        align-items: center;
+    }
+    .declined {
+        font-weight: 500;
+        color: $error;
+        display: flex;
+        align-items: center;
+    }
+    .share {
+        font-weight: 500;
+        color: $primary-blue;
+        cursor: pointer;
+        @media screen and (max-width: 800px) {
+           text-align: center;
+           padding-right: 8px;
+        }
+    }
+    .circle-red {
+        width: 16px;
+        height: 16px;
+        background: $error;
+        border-radius: 100%;
+        margin-right: 5.33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle-green {
+        width: 16px;
+        height: 16px;
+        background: $success;
+        border-radius: 100%;
+        margin-right: 5.33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-status {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin-top: 14px;
+        margin-left: 2.5px;
+    }
+}
+
+button {
+    margin: 16px 8px;
+    border-radius: 16px;
+}
+
+.btn-basic {
+    background: rgba(0, 98, 129, 0.05);
+    font-size: 14px;
+    font-weight: 400;
+    color: $kc-black;
+}
+.btn-active {
+    background: $primary-blue;
+    color: $kc-white;
+    font-size: 14px;
+    font-weight: 400;
+}
