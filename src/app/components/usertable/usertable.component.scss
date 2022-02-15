@@ -22,11 +22,32 @@ table {
     box-shadow: 0px 1px 5px 0px #0000002B;
     margin-bottom: 50px;
     th {
+        color: $gray-head-table;
+        font-weight: 700;
+        font-size: 12px;
         height: 54px;
         text-transform: uppercase;
+        border-bottom: 1px solid $light-gray;
+        padding-left: 16px;
     }
     td {
+        border-bottom: 1px solid $light-gray;
         height: 49px;
+        padding-left: 16px;
+        color: $gray-text;
+        font-weight: 400;
+    }
+    .accepted {
+        font-weight: 500;
+        color: $success;
+    }
+    .declined {
+        font-weight: 500;
+        color: $error;
+    }
+    .share {
+        font-weight: 500;
+        color: $primary-blue;
     }
 }
 

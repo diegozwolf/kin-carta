@@ -9,6 +9,8 @@ import { UsersComponent } from './users/users.component';
 import { CardsComponent } from './cards/cards.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { UsertableComponent } from './usertable/usertable.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +27,8 @@ import { UsertableComponent } from './usertable/usertable.component';
   imports: [
     CommonModule,
     MaterialModule,
+    FormsModule,
+    Ng2SearchPipeModule
 
   ],
   exports: [
@@ -34,7 +38,8 @@ import { UsertableComponent } from './usertable/usertable.component';
     QuestionsComponent,
     UsersComponent,
     CardsComponent,
-    UsertableComponent
+    UsertableComponent,
+    Ng2SearchPipeModule
   ]
 })
 export class ComponentsModule {}

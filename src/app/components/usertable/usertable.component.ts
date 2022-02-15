@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { share } from 'rxjs';
+// import { share } from 'rxjs';
 
-export interface PeriodicElement {
-  name: string;
-  lastname: string;
-  email: string;
-  status: string;
-  share: string
-}
+// export interface UserData {
+//   name: string;
+//   lastname: string;
+//   email: string;
+//   status: string;
+//   share: string
+// }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { name: 'John', lastname: 'Doe', email: 'john@doe.com', status: 'Accepted', share:'Share'},
-  { name: 'Jack', lastname: 'Makeer', email: 'jack@makeer.com', status: 'Accepted', share: 'Share'},
-  { name: 'Lucas', lastname: 'Lopez', email: 'lucas@lopez.com', status: 'Declined', share: 'Share'},
-  { name: 'Mary', lastname: 'Johnson', email: 'mary@johnson.com', status: 'Declined', share: 'Share'},
-  { name: 'June', lastname: 'Mayer', email: 'june@mayer.com', status: 'Declined', share: 'Share'},
-  { name: 'Charles', lastname: 'Power', email: 'charles@power.com', status: 'Accepted', share: 'Share'},
-];
+// const ELEMENT_DATA:  UserData[] = [
+//   { name: 'John', lastname: 'Doe', email: 'john@doe.com', status: 'Accepted', share:'Share'},
+//   { name: 'Jack', lastname: 'Makeer', email: 'jack@makeer.com', status: 'Accepted', share: 'Share'},
+//   { name: 'Lucas', lastname: 'Lopez', email: 'lucas@lopez.com', status: 'Declined', share: 'Share'},
+//   { name: 'Mary', lastname: 'Johnson', email: 'mary@johnson.com', status: 'Declined', share: 'Share'},
+//   { name: 'June', lastname: 'Mayer', email: 'june@mayer.com', status: 'Declined', share: 'Share'},
+//   { name: 'Charles', lastname: 'Power', email: 'charles@power.com', status: 'Accepted', share: 'Share'},
+// ];
 
 @Component({
   selector: 'app-usertable',
@@ -25,37 +25,57 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class UsertableComponent implements OnInit {
 
+  searchText:any;
+  userStatusValue: string = "";
+  userStatus: boolean = false;
+
+  users = [
+    { name: 'John', lastname: 'Doe', email: 'john@doe.com', status: 'Accepted', share:'Share'},
+    { name: 'Jack', lastname: 'Makeer', email: 'jack@makeer.com', status: 'Accepted', share: 'Share'},
+    { name: 'Lucas', lastname: 'Lopez', email: 'lucas@lopez.com', status: 'Declined', share: 'Share'},
+    { name: 'Mary', lastname: 'Johnson', email: 'mary@johnson.com', status: 'Declined', share: 'Share'},
+    { name: 'June', lastname: 'Mayer', email: 'june@mayer.com', status: 'Declined', share: 'Share'},
+    { name: 'Charles', lastname: 'Power', email: 'charles@power.com', status: 'Accepted', share: 'Share'},
+  ];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  displayedColumns: string[] = ['name', 'lastname', 'email', 'status', 'share'];
-  columnsToDisplay: string[] = this.displayedColumns.slice();
-  data: PeriodicElement[] = ELEMENT_DATA;
-
-  addColumn() {
-    const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
-    this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
-  }
-
-  removeColumn() {
-    if (this.columnsToDisplay.length) {
-      this.columnsToDisplay.pop();
+  changeStatus(status: string){
+    if( this.userStatus === true){
+      this.userStatusValue = status;
+      this.userStatus = !this.userStatus;
+    } else {
+      this.userStatusValue = '';
+      this.userStatus = !this.userStatus;
     }
   }
 
-  shuffle() {
-    let currentIndex = this.columnsToDisplay.length;
-    while (0 !== currentIndex) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+  // displayedColumns: string[] = ['name', 'lastname', 'email', 'status', 'share'];
+  // columnsToDisplay: string[] = this.displayedColumns.slice();
+  // addColumn() {
+  //   const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+  //   this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
+  // }
 
-      // Swap
-      let temp = this.columnsToDisplay[currentIndex];
-      this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
-      this.columnsToDisplay[randomIndex] = temp;
-    }
-  }
+  // removeColumn() {
+  //   if (this.columnsToDisplay.length) {
+  //     this.columnsToDisplay.pop();
+  //   }
+  // }
+
+  // shuffle() {
+  //   let currentIndex = this.columnsToDisplay.length;
+  //   while (0 !== currentIndex) {
+  //     let randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex -= 1;
+
+  //     // Swap
+  //     let temp = this.columnsToDisplay[currentIndex];
+  //     this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
+  //     this.columnsToDisplay[randomIndex] = temp;
+  //   }
+  // }
 
 }
