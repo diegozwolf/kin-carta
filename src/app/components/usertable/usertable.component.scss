@@ -40,14 +40,46 @@ table {
     .accepted {
         font-weight: 500;
         color: $success;
+        display: flex;
+        align-items: center;
     }
     .declined {
         font-weight: 500;
         color: $error;
+        display: flex;
+        align-items: center;
     }
     .share {
         font-weight: 500;
         color: $primary-blue;
+        cursor: pointer;
+    }
+    .circle-red {
+        width: 16px;
+        height: 16px;
+        background: $error;
+        border-radius: 100%;
+        margin-right: 5.33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle-green {
+        width: 16px;
+        height: 16px;
+        background: $success;
+        border-radius: 100%;
+        margin-right: 5.33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-status {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        margin-top: 14px;
+        margin-left: 2.5px;
     }
 }
 

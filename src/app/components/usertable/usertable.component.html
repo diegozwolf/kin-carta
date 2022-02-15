@@ -2,11 +2,13 @@
   <h2>Table</h2>
   <div class="btn-container">
     <p class="status-txt">Status filter:</p>
-    <button mat-button mat-button [ngClass]=" userStatusValue === 'Accepted' ? 'btn-active' : 'btn-basic'"(click)="changeStatus('Accepted')">
+    <button mat-button mat-button [ngClass]=" userStatusValue === 'Accepted' ? 'btn-active' : 'btn-basic'" (click)="changeStatus('Accepted')">
       Accepted
+      <img *ngIf="userStatusValue" src="/assets/img/close-icon.png" alt="close icon">
     </button>
     <button mat-button [ngClass]="userStatusValue === 'Declined' ? 'btn-active' : 'btn-basic'" (click)="changeStatus('Declined')">
       Declined
+      <img *ngIf="userStatusValue" src="/assets/img/close-icon.png" alt="close icon">
     </button>
   </div>
 </div>
@@ -25,9 +27,17 @@
       <td>{{user.lastname}}</td>
       <td>{{user.email}}</td>
       <td [ngClass]=" user.status === 'Accepted' ? 'accepted' : 'declined'">
+        <div [ngClass]=" user.status === 'Accepted' ? 'circle-green' : 'circle-red'">
+          <mat-icon class="icon-status" >
+            {{user.status === 'Accepted'? 'check' : 'close'}}
+          </mat-icon>
+        </div>
         {{user.status}}
       </td>
-      <td class="share">{{user.share}}</td>
+      <td class="share">
+        {{user.share}}
+        <img src="/assets/img/share-logo.svg" alt="share icon">
+      </td>
 
     </tr>
   </tbody>
